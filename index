@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS2SimWare | Roblox Case Cheat</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- Top-right Roblox user info -->
+  <div class="user-info">
+    <img class="avatar" src="https://i.ibb.co/TxXxpqX4/no-Filter-1.webp" alt="Avatar" />
+    <div class="user-details">
+      <strong>D5SHIlE</strong><br />
+      <span class="status">✅ Logged in from Roblox</span>
+    </div>
+  </div>
+
+  <header class="hero-section">
+    <div class="parallax-content">
+      <h1 class="logo">CS2SimWare</h1>
+      <p class="tagline">The Ultimate Roblox Case Roller Cheat</p>
+      <p class="price-note">Free Access - Instant Key Below</p>
+      <button class="roblox-login">Login with Roblox</button>
+    </div>
+  </header>
+
+  <section class="features-section">
+    <div class="features-box glassy">
+      <h2>Features</h2>
+      <ul>
+        <li>✓ Auto Roll</li>
+        <li>✓ Max Gamepasses</li>
+        <li>✓ Teleport to Case Room</li>
+        <li>✓ Inject Knife Skins</li>
+        <li>✓ Fake VAC Bypass</li>
+        <li>✓ Rainbow Skin Animation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="keygen-section">
+    <div class="keygen-box glassy">
+      <h3>Generate Your Free Key</h3>
+      <button id="generateBtn">Generate Key</button>
+      <div id="generatedKey" class="hidden"></div>
+      <a href="#" id="downloadBtn" class="hidden" download>Download Loader</a>
+    </div>
+  </section>
+
+  <script>
+    // Particles.js config
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 70 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.15, random: true },
+        size: { value: 2, random: true },
+        move: {
+          direction: "top",
+          speed: 1.2,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        },
+        modes: {
+          repulse: { distance: 80 }
+        }
+      },
+      retina_detect: true
+    });
+
+    // Keygen logic
+    document.getElementById("generateBtn").onclick = () => {
+      const key = "USER-D5SH-" + Math.random().toString(36).substring(2, 8).toUpperCase();
+      const keyDisplay = document.getElementById("generatedKey");
+      keyDisplay.innerText = `Your Key: ${key}`;
+      keyDisplay.classList.remove("hidden");
+
+      const download = document.getElementById("downloadBtn");
+      download.href = "CS2SimWare_Loader.bat"; // Replace with your file
+      download.classList.remove("hidden");
+    };
+  </script>
+</body>
+</html>
